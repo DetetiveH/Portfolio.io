@@ -3,8 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caique Brito | Dev_Portfolio</title>
     
+    <!-- PERFORMANCE: Preconnect para Fontes (Melhora LCP para SEO) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Título Otimizado com Palavras-chave de Cauda Longa -->
+    <title>Caique Brito | Desenvolvedor Web Full Stack & Técnico em TI</title>
+    
+    <!-- SEGURANÇA: Content Security Policy (CSP) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:;">
+
+    <!-- SEO TÉCNICO & META TAGS -->
+    <link rel="canonical" href="https://seusite.com/">
+    <meta name="description" content="Portfólio de Caique Brito - Técnico em Informática e estudante de ADS (3º Semestre). Especialista em criação de sites, HTML5, CSS3, JavaScript, React e Suporte Técnico em São Paulo.">
+    <meta name="keywords" content="Caique Brito, Desenvolvedor Web, Front-end, Back-end, ADS, Portfólio, HTML, CSS, JavaScript, Técnico em Informática, Suporte TI, São Paulo, Freelancer Web">
+    <meta name="author" content="Caique Brito">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#050505">
+
+    <!-- GEOLOCALIZAÇÃO (SEO LOCAL) -->
+    <meta name="geo.region" content="BR-SP">
+    <meta name="geo.placename" content="São Paulo">
+    <meta name="geo.position" content="-23.55052;-46.633308">
+    <meta name="ICBM" content="-23.55052, -46.633308">
+    
+    <!-- FAVICON (Placeholder) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- OPEN GRAPH (Redes Sociais) -->
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://seusite.com/">
+    <meta property="og:site_name" content="Caique Brito Portfólio">
+    <meta property="og:title" content="Caique Brito | Desenvolvedor Web & Técnico">
+    <meta property="og:description" content="Transformo ideias em soluções digitais. Conheça meus projetos e habilidades em desenvolvimento web.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Dev+Caique+Brito">
+    <meta property="og:image:alt" content="Banner do Portfólio de Caique Brito">
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://seusite.com/">
+    <meta name="twitter:title" content="Caique Brito | Dev_Portfolio">
+    <meta name="twitter:description" content="Construindo o futuro da web com código limpo e design minimalista.">
+    <meta name="twitter:image" content="https://via.placeholder.com/1200x630.png?text=Portfolio+Caique+Brito">
+    
+    <!-- DADOS ESTRUTURADOS (JSON-LD) - O "Ouro" do SEO -->
+    <script type="application/ld+json">
+    [
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Caique Brito",
+          "jobTitle": "Desenvolvedor Web e Técnico em Informática",
+          "url": "https://seusite.com",
+          "image": "https://via.placeholder.com/400x400",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "São Paulo",
+            "addressRegion": "SP",
+            "addressCountry": "BR"
+          },
+          "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Análise e Desenvolvimento de Sistemas"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/in/caique-brito-832480215/",
+            "https://github.com/",
+            "https://www.instagram.com/"
+          ],
+          "knowsAbout": ["HTML5", "CSS3", "JavaScript", "React", "Suporte Técnico", "Hardware", "Git"]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Caique Brito Portfólio",
+          "url": "https://seusite.com",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://seusite.com/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+    ]
+    </script>
+
     <!-- Importando Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -21,9 +107,10 @@
                         black: '#050505',
                         dark: '#0a0a0a',
                         surface: '#121212',
-                        primary: '#ffffff', // Branco puro para contraste indie
-                        accent: '#a3a3a3',  // Cinza médio
-                        highlight: '#22c55e' // Verde terminal sutil
+                        primary: '#ffffff',
+                        accent: '#a3a3a3',
+                        highlight: '#22c55e',
+                        error: '#ef4444'
                     },
                     fontFamily: {
                         mono: ['"Space Mono"', 'monospace'],
@@ -45,7 +132,6 @@
     </script>
 
     <style>
-        /* Fonte Indie/Tech */
         @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap');
 
         body {
@@ -58,7 +144,6 @@
             font-family: 'Space Mono', monospace;
         }
 
-        /* Scrollbar Minimalista */
         ::-webkit-scrollbar {
             width: 6px;
         }
@@ -72,7 +157,6 @@
             background: #555; 
         }
 
-        /* Efeito de digitação (Cursor piscando) */
         .typing-cursor::after {
             content: '_';
             animation: blink 1s step-end infinite;
@@ -84,7 +168,6 @@
             50% { opacity: 0; }
         }
 
-        /* Grid Background Sutil (Estilo Papel Milimetrado Dark) */
         .bg-grid-indie {
             background-size: 50px 50px;
             background-image: 
@@ -92,44 +175,71 @@
                 linear-gradient(to bottom, rgba(50, 50, 50, 0.05) 1px, transparent 1px);
         }
 
-        /* Utilitários de Borda */
         .border-indie {
             border: 1px solid #333;
         }
         .border-indie:hover {
             border-color: #fff;
         }
+        
+        .input-error {
+            border-color: #ef4444 !important;
+            animation: shake 0.5s;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+        
+        /* Classe para Skip Link (Acessibilidade/SEO) */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #22c55e;
+            color: black;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
     </style>
 </head>
 <body class="bg-black text-gray-300 antialiased overflow-x-hidden relative bg-grid-indie">
 
+    <!-- SEO & Acessibilidade: Skip Link -->
+    <a href="#home" class="skip-link font-mono font-bold">Pular para o conteúdo principal</a>
+
     <!-- Navbar Minimalista -->
-    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-sm border-b border-white/10">
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-sm border-b border-white/10" role="navigation" aria-label="Menu Principal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo Texto -->
-                <div class="flex-shrink-0 font-mono text-sm tracking-tighter">
+                <div class="flex-shrink-0 font-mono text-sm tracking-tighter hover:text-highlight transition-colors cursor-pointer">
                     <span class="text-white font-bold">&lt;Caique/&gt;</span>
                 </div>
                 
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8 font-mono text-xs uppercase tracking-widest">
-                        <a href="#home" class="hover:text-white transition-colors">01. Início</a>
-                        <a href="#sobre" class="hover:text-white transition-colors">02. Sobre</a>
-                        <a href="#servicos" class="hover:text-white transition-colors">03. Serviços</a>
-                        <a href="#projetos" class="hover:text-white transition-colors">04. Projetos</a>
+                        <a href="#home" class="hover:text-white transition-colors hover:underline decoration-highlight decoration-2 underline-offset-4" title="Ir para a página inicial">01. Início</a>
+                        <a href="#sobre" class="hover:text-white transition-colors hover:underline decoration-highlight decoration-2 underline-offset-4" title="Saiba mais sobre Caique Brito">02. Sobre</a>
+                        <a href="#servicos" class="hover:text-white transition-colors hover:underline decoration-highlight decoration-2 underline-offset-4" title="Ver serviços oferecidos">03. Serviços</a>
+                        <a href="#projetos" class="hover:text-white transition-colors hover:underline decoration-highlight decoration-2 underline-offset-4" title="Ver portfólio de projetos">04. Projetos</a>
                     </div>
                 </div>
 
                 <div class="hidden md:block">
-                    <a href="#contato" class="font-mono text-xs border border-white/20 hover:bg-white hover:text-black hover:border-white px-4 py-2 transition-all">
+                    <a href="#contato" class="font-mono text-xs border border-white/20 hover:bg-white hover:text-black hover:border-white px-4 py-2 transition-all" title="Entre em contato">
                         Fale Comigo
                     </a>
                 </div>
 
                 <!-- Botão Mobile -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-white p-2">
+                    <button id="mobile-menu-btn" class="text-white p-2 hover:text-highlight transition-colors" aria-label="Abrir Menu Mobile" aria-expanded="false">
                         <i class="fas fa-bars"></i>
                     </button>
                 </div>
@@ -137,7 +247,7 @@
         </div>
 
         <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="hidden md:hidden bg-black border-b border-white/10 absolute w-full">
+        <div id="mobile-menu" class="hidden md:hidden bg-black border-b border-white/10 absolute w-full z-40">
             <div class="px-4 py-4 space-y-2 font-mono text-sm">
                 <a href="#home" class="block hover:text-white py-2 border-b border-white/5">01. Início</a>
                 <a href="#sobre" class="block hover:text-white py-2 border-b border-white/5">02. Sobre</a>
@@ -148,275 +258,423 @@
         </div>
     </nav>
 
-    <!-- Hero Section (Brutalista/Indie) -->
-    <section id="home" class="min-h-screen flex flex-col justify-center px-4 relative pt-20">
-        <div class="max-w-5xl mx-auto w-full">
-            <p class="font-mono text-highlight mb-4 text-sm tracking-widest">Olá, mundo. Eu sou</p>
-            
-            <h1 class="text-5xl md:text-8xl font-bold text-white mb-2 tracking-tighter leading-none">
-                CAIQUE BRITO.
-            </h1>
-            <h2 class="text-3xl md:text-6xl font-bold text-gray-600 mb-8 tracking-tighter leading-none">
-                CONSTRUINDO O FUTURO WEB.
-            </h2>
-            
-            <p class="max-w-xl text-gray-400 text-lg mb-10 leading-relaxed font-light">
-                Técnico em Informática & Estudante de ADS (3º Sem). <br>
-                Focado em criar experiências digitais minimalistas, funcionais e de alto desempenho.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row gap-4 font-mono text-sm">
-                <a href="#projetos" class="border border-white text-white hover:bg-white hover:text-black px-8 py-4 transition-all text-center uppercase tracking-wider">
-                    Ver Projetos
-                </a>
-                <a href="https://www.linkedin.com/in/caique-brito-832480215/" target="_blank" class="border border-transparent text-gray-400 hover:text-white px-8 py-4 transition-all text-center flex items-center justify-center gap-2">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-            </div>
-        </div>
-
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
-            <i class="fas fa-arrow-down text-gray-600"></i>
-        </div>
-    </section>
-
-    <!-- Marquee Tech Stack (Faixa estilo fita de isolamento) -->
-    <div class="border-y border-white/10 bg-surface py-3 overflow-hidden select-none">
-        <div class="flex animate-infinite-scroll w-[200%] font-mono text-xs uppercase tracking-[0.2em] text-gray-500">
-            <div class="flex space-x-16 mx-8 whitespace-nowrap">
-                <span>HTML5</span> <span>CSS3</span> <span>JAVASCRIPT</span> <span>GIT</span> <span>SQL</span> <span>REACT.JS</span> <span>TAILWIND</span> <span>HARDWARE</span> <span>LÓGICA</span>
-                <span>//</span>
-                <span>HTML5</span> <span>CSS3</span> <span>JAVASCRIPT</span> <span>GIT</span> <span>SQL</span> <span>REACT.JS</span> <span>TAILWIND</span> <span>HARDWARE</span> <span>LÓGICA</span>
-                <span>//</span>
-            </div>
-            <div class="flex space-x-16 mx-8 whitespace-nowrap">
-                <span>HTML5</span> <span>CSS3</span> <span>JAVASCRIPT</span> <span>GIT</span> <span>SQL</span> <span>REACT.JS</span> <span>TAILWIND</span> <span>HARDWARE</span> <span>LÓGICA</span>
-                <span>//</span>
-                <span>HTML5</span> <span>CSS3</span> <span>JAVASCRIPT</span> <span>GIT</span> <span>SQL</span> <span>REACT.JS</span> <span>TAILWIND</span> <span>HARDWARE</span> <span>LÓGICA</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Seção Sobre & Timeline -->
-    <section id="sobre" class="py-24 border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                <!-- Coluna Texto -->
-                <div>
-                    <div class="flex items-center gap-4 mb-8">
-                        <span class="font-mono text-highlight text-xl">01.</span>
-                        <h2 class="text-3xl font-bold text-white uppercase tracking-tight">Sobre Mim</h2>
-                    </div>
-                    
-                    <div class="space-y-6 text-gray-400 text-lg font-light leading-relaxed">
-                        <p>
-                            De <strong class="text-white">Auxiliar Administrativo</strong> a <strong class="text-white">Desenvolvedor</strong>. Minha jornada é marcada pela curiosidade de entender como as coisas funcionam, seja um processo de escritório ou uma aplicação web complexa.
-                        </p>
-                        <p>
-                            Atualmente, tenho 22 anos e estou mergulhado nos estudos de programação. Acredito que a tecnologia deve ser acessível e resolver problemas reais, sem complicações desnecessárias.
-                        </p>
-                    </div>
-
-                    <!-- Botão Download CV (Simulado) -->
-                    <div class="mt-8">
-                        <a href="#" class="inline-flex items-center gap-2 text-white border-b border-highlight pb-1 hover:text-highlight transition-colors font-mono text-sm">
-                            <i class="fas fa-download"></i> Baixar Curriculo (PDF)
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Coluna Timeline -->
-                <div class="relative pl-8 border-l border-white/10 space-y-12">
-                    <!-- Item 1 -->
-                    <div class="relative group">
-                        <div class="absolute -left-[37px] top-1 w-4 h-4 bg-black border border-white rounded-full group-hover:bg-highlight transition-colors"></div>
-                        <span class="font-mono text-xs text-gray-500 mb-1 block">2023 - Presente</span>
-                        <h3 class="text-xl text-white font-bold">ADS - 3º Semestre</h3>
-                        <p class="text-gray-500 text-sm mt-2">Aprofundando conhecimentos em Engenharia de Software, Banco de Dados e Front-end.</p>
-                    </div>
-                    
-                    <!-- Item 2 -->
-                    <div class="relative group">
-                        <div class="absolute -left-[37px] top-1 w-4 h-4 bg-black border border-gray-600 rounded-full group-hover:border-white transition-colors"></div>
-                        <span class="font-mono text-xs text-gray-500 mb-1 block">2022 - Presente</span>
-                        <h3 class="text-xl text-white font-bold">Aux. Administrativo</h3>
-                        <p class="text-gray-500 text-sm mt-2">Desenvolvimento de soft skills: organização, gestão de tempo e atendimento ao cliente.</p>
-                    </div>
-
-                    <!-- Item 3 -->
-                    <div class="relative group">
-                        <div class="absolute -left-[37px] top-1 w-4 h-4 bg-black border border-gray-600 rounded-full group-hover:border-white transition-colors"></div>
-                        <span class="font-mono text-xs text-gray-500 mb-1 block">2020</span>
-                        <h3 class="text-xl text-white font-bold">Técnico em Informática</h3>
-                        <p class="text-gray-500 text-sm mt-2">Fundamentos de hardware, redes e lógica de programação.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- O Que Eu Faço (Grid Indie) -->
-    <section id="servicos" class="py-24 border-b border-white/5 bg-surface">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center gap-4 mb-12">
-                <span class="font-mono text-highlight text-xl">02.</span>
-                <h2 class="text-3xl font-bold text-white uppercase tracking-tight">O Que Eu Faço</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Card 1 -->
-                <div class="border border-white/10 p-8 hover:bg-white/5 transition-colors group">
-                    <i class="fas fa-code text-3xl text-gray-600 mb-6 group-hover:text-highlight transition-colors"></i>
-                    <h3 class="text-xl text-white font-bold mb-4 font-mono">Web Development</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Criação de sites institucionais, landing pages e portfólios utilizando HTML5, CSS3 e JavaScript moderno. Foco em código limpo.
-                    </p>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="border border-white/10 p-8 hover:bg-white/5 transition-colors group">
-                    <i class="fas fa-mobile-alt text-3xl text-gray-600 mb-6 group-hover:text-highlight transition-colors"></i>
-                    <h3 class="text-xl text-white font-bold mb-4 font-mono">Responsividade</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Adaptação de layouts para funcionarem perfeitamente em qualquer dispositivo: celulares, tablets e desktops.
-                    </p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="border border-white/10 p-8 hover:bg-white/5 transition-colors group">
-                    <i class="fas fa-tools text-3xl text-gray-600 mb-6 group-hover:text-highlight transition-colors"></i>
-                    <h3 class="text-xl text-white font-bold mb-4 font-mono">Suporte Técnico</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Diagnóstico e resolução de problemas de hardware e software, garantindo que a tecnologia trabalhe a seu favor.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projetos (Estilo Galeria Crua) -->
-    <section id="projetos" class="py-24 border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between mb-12">
-                <div class="flex items-center gap-4">
-                    <span class="font-mono text-highlight text-xl">03.</span>
-                    <h2 class="text-3xl font-bold text-white uppercase tracking-tight">Projetos Selecionados</h2>
-                </div>
-                <a href="https://github.com/" target="_blank" class="hidden md:block text-sm text-gray-500 hover:text-white font-mono border-b border-gray-700 hover:border-white pb-1 transition-all">
-                    Ver tudo no GitHub ->
-                </a>
-            </div>
-
-            <!-- Grid de Projetos -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- Wrap do conteúdo principal para semântica SEO -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex flex-col justify-center px-4 relative pt-24 pb-12 md:pt-20 md:pb-0" aria-label="Introdução">
+            <div class="max-w-5xl mx-auto w-full">
+                <p class="font-mono text-highlight mb-4 text-xs sm:text-sm tracking-widest">Olá, mundo. Eu sou</p>
                 
-                <!-- Projeto 1 -->
-                <article class="group relative bg-surface border border-white/10 hover:border-white/30 transition-all">
-                    <div class="aspect-video bg-[#0d0d0d] flex items-center justify-center border-b border-white/5 overflow-hidden">
-                        <!-- Efeito Glitch no hover (simples) -->
-                        <div class="text-6xl text-gray-800 font-mono font-bold group-hover:text-gray-600 group-hover:scale-110 transition-transform duration-500">
-                            &lt;/&gt;
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl text-white font-bold font-mono group-hover:text-highlight transition-colors">Portfólio v1</h3>
-                            <div class="flex gap-3 text-gray-500">
-                                <a href="#" class="hover:text-white"><i class="fab fa-github"></i></a>
-                                <a href="#" class="hover:text-white"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                        <p class="text-gray-400 text-sm mb-6 font-light">
-                            Este site que você está vendo. Desenvolvido com foco em performance e estética indie/minimalista.
-                        </p>
-                        <ul class="flex flex-wrap gap-2 font-mono text-xs text-gray-500 uppercase">
-                            <li class="border border-white/10 px-2 py-1">HTML5</li>
-                            <li class="border border-white/10 px-2 py-1">Tailwind</li>
-                            <li class="border border-white/10 px-2 py-1">JS</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <!-- Projeto 2 -->
-                <article class="group relative bg-surface border border-white/10 hover:border-white/30 transition-all">
-                    <div class="aspect-video bg-[#0d0d0d] flex items-center justify-center border-b border-white/5 overflow-hidden">
-                        <div class="text-6xl text-gray-800 font-mono font-bold group-hover:text-gray-600 group-hover:scale-110 transition-transform duration-500">
-                            JS
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl text-white font-bold font-mono group-hover:text-highlight transition-colors">Calculadora Web</h3>
-                            <div class="flex gap-3 text-gray-500">
-                                <a href="#" class="hover:text-white"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                        <p class="text-gray-400 text-sm mb-6 font-light">
-                            Projeto prático para treinar lógica de programação e manipulação do DOM. (Em desenvolvimento)
-                        </p>
-                        <ul class="flex flex-wrap gap-2 font-mono text-xs text-gray-500 uppercase">
-                            <li class="border border-white/10 px-2 py-1">JavaScript</li>
-                            <li class="border border-white/10 px-2 py-1">CSS Grid</li>
-                        </ul>
-                    </div>
-                </article>
-
-            </div>
-            
-            <div class="mt-8 text-center md:hidden">
-                <a href="https://github.com/" class="text-sm text-gray-500 hover:text-white font-mono border-b border-gray-700 pb-1">Ver GitHub Completo</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção Setup (Nova coisa!) -->
-    <section class="py-20 border-b border-white/5">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h3 class="text-xl font-bold text-white font-mono mb-8 uppercase">&lt;Meu Setup & Ferramentas /&gt;</h3>
-            <div class="flex flex-wrap justify-center gap-4 text-sm font-mono text-gray-400">
-                <span class="bg-surface border border-white/10 px-4 py-2 hover:border-white/40 transition-colors">VS Code</span>
-                <span class="bg-surface border border-white/10 px-4 py-2 hover:border-white/40 transition-colors">Windows 11</span>
-                <span class="bg-surface border border-white/10 px-4 py-2 hover:border-white/40 transition-colors">Figma</span>
-                <span class="bg-surface border border-white/10 px-4 py-2 hover:border-white/40 transition-colors">GitHub Desktop</span>
-                <span class="bg-surface border border-white/10 px-4 py-2 hover:border-white/40 transition-colors">Notion</span>
-                <span class="bg-surface border border-white/10 px-4 py-2 hover:border-white/40 transition-colors">Spotify (para codar)</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Rodapé Indie -->
-    <footer id="contato" class="py-20 bg-black relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
-            
-            <div class="max-w-md">
-                <h2 class="text-4xl md:text-5xl font-bold text-white font-mono mb-6 tracking-tighter">
-                    VAMOS CRIAR<br>ALGO NOVO?
+                <h1 class="text-3xl sm:text-5xl md:text-8xl font-bold text-white mb-2 tracking-tighter leading-none hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-white hover:to-gray-500 transition-all duration-500 cursor-default">
+                    CAIQUE BRITO.
+                </h1>
+                <h2 class="text-xl sm:text-3xl md:text-6xl font-bold text-gray-600 mb-8 tracking-tighter leading-none">
+                    CONSTRUINDO O FUTURO WEB.
                 </h2>
-                <p class="text-gray-500 mb-8 font-light">
-                    Estou sempre aberto a conversar sobre tecnologia, vagas júnior ou apenas trocar uma ideia.
+                
+                <p class="max-w-xl text-gray-400 text-sm sm:text-base md:text-lg mb-10 leading-relaxed font-light">
+                    Técnico em Informática & Estudante de ADS (3º Sem). <br>
+                    Focado em desenvolvimento web, lógica de programação e soluções eficientes.
                 </p>
-                <div class="flex gap-4">
-                    <a href="https://wa.me/5511984606694" target="_blank" class="bg-highlight text-black font-bold px-6 py-3 font-mono hover:bg-white transition-colors">
-                        WhatsApp ->
+                
+                <div class="flex flex-col sm:flex-row gap-4 font-mono text-sm w-full sm:w-auto">
+                    <a href="#projetos" class="border border-white text-white hover:bg-white hover:text-black px-8 py-4 transition-all text-center uppercase tracking-wider shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] w-full sm:w-auto" title="Ver meus projetos recentes">
+                        Ver Projetos
                     </a>
-                    <a href="mailto:caique@exemplo.com" class="border border-white/20 text-white px-6 py-3 font-mono hover:bg-white hover:text-black transition-colors">
-                        Email
+                    <a href="https://www.linkedin.com/in/caique-brito-832480215/" target="_blank" rel="noopener noreferrer" class="border border-transparent text-gray-400 hover:text-white px-8 py-4 transition-all text-center flex items-center justify-center gap-2 group w-full sm:w-auto" aria-label="Visitar LinkedIn de Caique Brito" title="Conectar no LinkedIn">
+                        <i class="fab fa-linkedin group-hover:text-[#0077b5] transition-colors"></i> LinkedIn
                     </a>
                 </div>
             </div>
 
-            <div class="flex flex-col gap-4 text-right">
-                <a href="https://www.linkedin.com/in/caique-brito-832480215/" class="text-gray-400 hover:text-white transition-colors text-lg">LinkedIn /</a>
-                <a href="#" class="text-gray-400 hover:text-white transition-colors text-lg">GitHub /</a>
-                <a href="#" class="text-gray-400 hover:text-white transition-colors text-lg">Instagram /</a>
+            <!-- Scroll Indicator (Escondido em mobile muito pequeno para economizar espaço) -->
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
+                <i class="fas fa-arrow-down text-gray-600"></i>
             </div>
+        </section>
 
+        <!-- Marquee Tech Stack -->
+        <div class="border-y border-white/10 bg-surface py-3 overflow-hidden select-none hover:bg-white/5 transition-colors" role="marquee" aria-label="Tecnologias e Ferramentas">
+            <div class="flex animate-infinite-scroll w-[200%] font-mono text-[10px] sm:text-xs uppercase tracking-[0.2em] text-gray-500 hover:text-highlight transition-colors duration-500">
+                <div class="flex space-x-8 sm:space-x-16 mx-4 sm:mx-8 whitespace-nowrap">
+                    <span>HTML5</span> <span>CSS3</span> <span>JAVASCRIPT</span> <span>GIT</span> <span>SQL</span> <span>REACT.JS</span> <span>TAILWIND</span> <span>HARDWARE</span> <span>LÓGICA</span>
+                    <span>//</span>
+                    <span>HTML5</span> <span>CSS3</span> <span>JAVASCRIPT</span> <span>GIT</span> <span>SQL</span> <span>REACT.JS</span> <span>TAILWIND</span> <span>HARDWARE</span> <span>LÓGICA</span>
+                    <span>//</span>
+                </div>
+                <div class="flex space-x-8 sm:space-x-16 mx-4 sm:mx-8 whitespace-nowrap">
+                    <span>HTML5</span> <span>CSS3</span> <span>JAVASCRIPT</span> <span>GIT</span> <span>SQL</span> <span>REACT.JS</span> <span>TAILWIND</span> <span>HARDWARE</span> <span>LÓGICA</span>
+                    <span>//</span>
+                    <span>HTML5</span> <span>CSS3</span> <span>JAVASCRIPT</span> <span>GIT</span> <span>SQL</span> <span>REACT.JS</span> <span>TAILWIND</span> <span>HARDWARE</span> <span>LÓGICA</span>
+                </div>
+            </div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-4 mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between text-xs text-gray-600 font-mono uppercase">
-            <p>&copy; 2024 Caique Brito.</p>
-            <p>Design & Code by Caique.</p>
+        <!-- Seção Sobre & Timeline -->
+        <section id="sobre" class="py-16 md:py-24 border-b border-white/5" aria-label="Sobre Mim e Histórico">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                    <div>
+                        <div class="flex items-center gap-4 mb-8">
+                            <span class="font-mono text-highlight text-xl">01.</span>
+                            <h2 class="text-2xl md:text-3xl font-bold text-white uppercase tracking-tight">Sobre Mim</h2>
+                        </div>
+                        
+                        <div class="space-y-6 text-gray-400 text-base md:text-lg font-light leading-relaxed">
+                            <p>
+                                Atualmente trabalho como <strong class="text-white">Auxiliar Administrativo</strong> enquanto me dedico a me tornar um <strong class="text-white">Desenvolvedor</strong>. Minha jornada é marcada pela curiosidade de entender como as coisas funcionam, unindo a organização do meu dia a dia com a lógica da programação.
+                            </p>
+                            <p>
+                                Tenho 22 anos e sou estudante de Análise e Desenvolvimento de Sistemas. Acredito que a tecnologia deve ser acessível e estou construindo minha base técnica para, em breve, ingressar profissionalmente na área de TI.
+                            </p>
+                        </div>
+
+                        <div class="mt-8">
+                            <a href="#" class="inline-flex items-center gap-2 text-white border-b border-highlight pb-1 hover:text-highlight transition-colors font-mono text-sm group" title="Download do Currículo em PDF">
+                                <i class="fas fa-download group-hover:animate-bounce"></i> Baixar Curriculo (PDF)
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-8 border-l border-white/10 space-y-12">
+                        <div class="relative group cursor-pointer">
+                            <div class="absolute -left-[37px] top-1 w-4 h-4 bg-black border border-white rounded-full group-hover:bg-highlight group-hover:scale-125 transition-all"></div>
+                            <span class="font-mono text-xs text-gray-500 mb-1 block group-hover:text-highlight transition-colors">2023 - Presente</span>
+                            <h3 class="text-lg md:text-xl text-white font-bold group-hover:translate-x-2 transition-transform">ADS - 3º Semestre</h3>
+                            <p class="text-gray-500 text-sm mt-2">Aprofundando conhecimentos em Engenharia de Software, Banco de Dados e Front-end.</p>
+                        </div>
+                        
+                        <div class="relative group cursor-pointer">
+                            <div class="absolute -left-[37px] top-1 w-4 h-4 bg-black border border-gray-600 rounded-full group-hover:border-white group-hover:bg-white group-hover:scale-125 transition-all"></div>
+                            <span class="font-mono text-xs text-gray-500 mb-1 block group-hover:text-white transition-colors">2022 - Presente</span>
+                            <h3 class="text-lg md:text-xl text-white font-bold group-hover:translate-x-2 transition-transform">Aux. Administrativo</h3>
+                            <p class="text-gray-500 text-sm mt-2">Desenvolvimento de soft skills: organização, gestão de tempo e atendimento ao cliente.</p>
+                        </div>
+
+                        <div class="relative group cursor-pointer">
+                            <div class="absolute -left-[37px] top-1 w-4 h-4 bg-black border border-gray-600 rounded-full group-hover:border-white group-hover:bg-white group-hover:scale-125 transition-all"></div>
+                            <span class="font-mono text-xs text-gray-500 mb-1 block group-hover:text-white transition-colors">2020</span>
+                            <h3 class="text-lg md:text-xl text-white font-bold group-hover:translate-x-2 transition-transform">Técnico em Informática</h3>
+                            <p class="text-gray-500 text-sm mt-2">Fundamentos de hardware, redes e lógica de programação.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- O Que Eu Faço -->
+        <section id="servicos" class="py-16 md:py-24 border-b border-white/5 bg-surface" aria-label="Serviços e Habilidades">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center gap-4 mb-12">
+                    <span class="font-mono text-highlight text-xl">02.</span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white uppercase tracking-tight">O Que Eu Faço</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="border border-white/10 p-6 md:p-8 hover:bg-white/5 transition-colors group hover:-translate-y-2 duration-300 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-20 h-20 bg-highlight/10 rounded-bl-full -mr-10 -mt-10 transition-all group-hover:w-full group-hover:h-full group-hover:rounded-none group-hover:mr-0 group-hover:mt-0 group-hover:bg-highlight/5 z-0"></div>
+                        <i class="fas fa-code text-3xl text-gray-600 mb-6 group-hover:text-highlight transition-colors relative z-10" aria-hidden="true"></i>
+                        <h3 class="text-xl text-white font-bold mb-4 font-mono relative z-10">Web Development</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed relative z-10">
+                            Criação de sites institucionais, landing pages e portfólios utilizando HTML5, CSS3 e JavaScript moderno. Foco em código limpo e SEO.
+                        </p>
+                    </div>
+
+                    <div class="border border-white/10 p-6 md:p-8 hover:bg-white/5 transition-colors group hover:-translate-y-2 duration-300 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-20 h-20 bg-blue-500/10 rounded-bl-full -mr-10 -mt-10 transition-all group-hover:w-full group-hover:h-full group-hover:rounded-none group-hover:mr-0 group-hover:mt-0 group-hover:bg-blue-500/5 z-0"></div>
+                        <i class="fas fa-mobile-alt text-3xl text-gray-600 mb-6 group-hover:text-blue-400 transition-colors relative z-10" aria-hidden="true"></i>
+                        <h3 class="text-xl text-white font-bold mb-4 font-mono relative z-10">Responsividade</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed relative z-10">
+                            Adaptação de layouts para funcionarem perfeitamente em qualquer dispositivo: celulares, tablets e desktops. Mobile First.
+                        </p>
+                    </div>
+
+                    <div class="border border-white/10 p-6 md:p-8 hover:bg-white/5 transition-colors group hover:-translate-y-2 duration-300 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-20 h-20 bg-orange-500/10 rounded-bl-full -mr-10 -mt-10 transition-all group-hover:w-full group-hover:h-full group-hover:rounded-none group-hover:mr-0 group-hover:mt-0 group-hover:bg-orange-500/5 z-0"></div>
+                        <i class="fas fa-tools text-3xl text-gray-600 mb-6 group-hover:text-orange-400 transition-colors relative z-10" aria-hidden="true"></i>
+                        <h3 class="text-xl text-white font-bold mb-4 font-mono relative z-10">Suporte Técnico</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed relative z-10">
+                            Diagnóstico e resolução de problemas de hardware e software, garantindo que a tecnologia trabalhe a seu favor.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificados -->
+        <section class="py-16 md:py-20 border-b border-white/5" aria-label="Certificados e Cursos">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h3 class="text-xl font-bold text-white font-mono mb-8 uppercase text-center">&lt;Certificações & Cursos /&gt;</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="border border-white/10 p-4 text-center hover:bg-white hover:text-black transition-all cursor-pointer group">
+                        <i class="fas fa-certificate text-2xl mb-2 text-gray-500 group-hover:text-black"></i>
+                        <p class="font-mono text-xs sm:text-sm font-bold">HTML5 & CSS3</p>
+                        <span class="text-[10px] sm:text-xs text-gray-500 group-hover:text-gray-800">Curso em Vídeo</span>
+                    </div>
+                    <div class="border border-white/10 p-4 text-center hover:bg-white hover:text-black transition-all cursor-pointer group">
+                        <i class="fas fa-certificate text-2xl mb-2 text-gray-500 group-hover:text-black"></i>
+                        <p class="font-mono text-xs sm:text-sm font-bold">JavaScript</p>
+                        <span class="text-[10px] sm:text-xs text-gray-500 group-hover:text-gray-800">Udemy</span>
+                    </div>
+                    <div class="border border-white/10 p-4 text-center hover:bg-white hover:text-black transition-all cursor-pointer group">
+                        <i class="fas fa-certificate text-2xl mb-2 text-gray-500 group-hover:text-black"></i>
+                        <p class="font-mono text-xs sm:text-sm font-bold">Git & GitHub</p>
+                        <span class="text-[10px] sm:text-xs text-gray-500 group-hover:text-gray-800">Alura</span>
+                    </div>
+                    <div class="border border-white/10 p-4 text-center hover:bg-white hover:text-black transition-all cursor-pointer group">
+                        <i class="fas fa-certificate text-2xl mb-2 text-gray-500 group-hover:text-black"></i>
+                        <p class="font-mono text-xs sm:text-sm font-bold">Lógica de Prog.</p>
+                        <span class="text-[10px] sm:text-xs text-gray-500 group-hover:text-gray-800">Digital Innovation One</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projetos -->
+        <section id="projetos" class="py-16 md:py-24 border-b border-white/5" aria-label="Projetos Selecionados">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between mb-12">
+                    <div class="flex items-center gap-4">
+                        <span class="font-mono text-highlight text-xl">03.</span>
+                        <h2 class="text-2xl md:text-3xl font-bold text-white uppercase tracking-tight">Projetos Selecionados</h2>
+                    </div>
+                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="hidden md:block text-sm text-gray-500 hover:text-white font-mono border-b border-gray-700 hover:border-white pb-1 transition-all" title="Ver todos os repositórios no GitHub">
+                        Ver tudo no GitHub ->
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <article class="group relative bg-surface border border-white/10 hover:border-white/30 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-highlight/5">
+                        <div class="aspect-video bg-[#0d0d0d] flex items-center justify-center border-b border-white/5 overflow-hidden">
+                            <div class="text-5xl md:text-6xl text-gray-800 font-mono font-bold group-hover:text-white group-hover:scale-110 transition-transform duration-500 relative">
+                                &lt;/&gt;
+                                <span class="absolute top-0 left-0 -ml-1 text-red-500 opacity-0 group-hover:opacity-70 group-hover:animate-pulse"> &lt;/&gt; </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl text-white font-bold font-mono group-hover:text-highlight transition-colors">Portfólio v1</h3>
+                                <div class="flex gap-3 text-gray-500">
+                                    <a href="#" class="hover:text-white transform hover:scale-110 transition-transform" aria-label="Código no GitHub" title="Ver código fonte"><i class="fab fa-github"></i></a>
+                                    <a href="#" class="hover:text-white transform hover:scale-110 transition-transform" aria-label="Visitar Projeto" title="Ver projeto online"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <p class="text-gray-400 text-sm mb-6 font-light">
+                                Este site que você está vendo. Desenvolvido com foco em performance, SEO e estética indie/minimalista.
+                            </p>
+                            <ul class="flex flex-wrap gap-2 font-mono text-xs text-gray-500 uppercase">
+                                <li class="border border-white/10 px-2 py-1 group-hover:border-highlight/50 transition-colors">HTML5</li>
+                                <li class="border border-white/10 px-2 py-1 group-hover:border-highlight/50 transition-colors">Tailwind</li>
+                                <li class="border border-white/10 px-2 py-1 group-hover:border-highlight/50 transition-colors">JS</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="group relative bg-surface border border-white/10 hover:border-white/30 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/5">
+                        <div class="aspect-video bg-[#0d0d0d] flex items-center justify-center border-b border-white/5 overflow-hidden">
+                            <div class="text-5xl md:text-6xl text-gray-800 font-mono font-bold group-hover:text-blue-500 group-hover:scale-110 transition-transform duration-500">
+                                JS
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl text-white font-bold font-mono group-hover:text-blue-400 transition-colors">Calculadora Web</h3>
+                                <div class="flex gap-3 text-gray-500">
+                                    <a href="#" class="hover:text-white transform hover:scale-110 transition-transform" aria-label="Código no GitHub" title="Ver código fonte"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                            <p class="text-gray-400 text-sm mb-6 font-light">
+                                Projeto prático para treinar lógica de programação e manipulação do DOM.
+                            </p>
+                            <ul class="flex flex-wrap gap-2 font-mono text-xs text-gray-500 uppercase">
+                                <li class="border border-white/10 px-2 py-1 group-hover:border-blue-500/50 transition-colors">JavaScript</li>
+                                <li class="border border-white/10 px-2 py-1 group-hover:border-blue-500/50 transition-colors">CSS Grid</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
+                
+                <div class="mt-8 text-center md:hidden">
+                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-500 hover:text-white font-mono border-b border-gray-700 pb-1" title="Visitar GitHub">Ver GitHub Completo</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Changelog -->
+        <section class="py-12 border-b border-white/5 bg-black/50" aria-label="Histórico de Versões">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h3 class="text-sm font-bold text-gray-500 font-mono mb-6 uppercase tracking-widest border-b border-gray-800 pb-2">Histórico de Versões</h3>
+                
+                <div class="space-y-4">
+                    <div class="flex items-start group">
+                        <div class="mr-4 pt-1">
+                            <div class="w-2 h-2 bg-highlight rounded-full animate-pulse"></div>
+                        </div>
+                        <div class="group-hover:translate-x-2 transition-transform duration-300">
+                            <div class="flex items-center gap-3">
+                                <h4 class="text-white font-mono font-bold">v2.2 - SEO & Performance</h4>
+                                <span class="text-[10px] bg-highlight/20 text-highlight px-2 py-0.5 rounded uppercase font-bold">Atual</span>
+                            </div>
+                            <p class="text-gray-500 text-xs mt-1 font-mono">
+                                Inclusão de preconnect, atributos title em links, skip-link para acessibilidade e schema.org WebSite.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start group opacity-70 hover:opacity-100 transition-opacity">
+                        <div class="mr-4 pt-1">
+                            <div class="w-2 h-2 bg-gray-700 rounded-full group-hover:bg-gray-400"></div>
+                        </div>
+                        <div class="group-hover:translate-x-2 transition-transform duration-300">
+                            <h4 class="text-gray-400 font-mono font-bold group-hover:text-white">v2.1 - Segurança e Robustez</h4>
+                            <p class="text-gray-600 text-xs mt-1 font-mono">
+                                Implementação de CSP, sanitização de inputs e validação de formulário.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start group opacity-50 hover:opacity-100 transition-opacity">
+                        <div class="mr-4 pt-1">
+                            <div class="w-2 h-2 bg-gray-700 rounded-full group-hover:bg-gray-400"></div>
+                        </div>
+                        <div class="group-hover:translate-x-2 transition-transform duration-300">
+                            <h4 class="text-gray-400 font-mono font-bold group-hover:text-white">v2.0 - Dark Indie</h4>
+                            <p class="text-gray-600 text-xs mt-1 font-mono">
+                                Redesign completo para estética dark/brutalista.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Setup -->
+        <section class="py-16 md:py-20 border-b border-white/5" aria-label="Ferramentas e Setup">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h3 class="text-xl font-bold text-white font-mono mb-8 uppercase">&lt;Meu Setup & Ferramentas /&gt;</h3>
+                <div class="flex flex-wrap justify-center gap-4 text-xs sm:text-sm font-mono text-gray-400">
+                    <span class="bg-surface border border-white/10 px-4 py-2 hover:border-highlight hover:text-white hover:bg-highlight/10 transition-all cursor-default" title="Editor de Código">VS Code</span>
+                    <span class="bg-surface border border-white/10 px-4 py-2 hover:border-blue-500 hover:text-white hover:bg-blue-500/10 transition-all cursor-default" title="Sistema Operacional">Windows 11</span>
+                    <span class="bg-surface border border-white/10 px-4 py-2 hover:border-purple-500 hover:text-white hover:bg-purple-500/10 transition-all cursor-default" title="Design de Interface">Figma</span>
+                    <span class="bg-surface border border-white/10 px-4 py-2 hover:border-gray-500 hover:text-white hover:bg-gray-500/10 transition-all cursor-default" title="Controle de Versão">GitHub Desktop</span>
+                    <span class="bg-surface border border-white/10 px-4 py-2 hover:border-white hover:text-white hover:bg-white/10 transition-all cursor-default" title="Organização">Notion</span>
+                    <span class="bg-surface border border-white/10 px-4 py-2 hover:border-green-500 hover:text-white hover:bg-green-500/10 transition-all cursor-default flex items-center gap-2" title="Música para Codar"><i class="fab fa-spotify"></i> Spotify</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulário Robusto com Validação -->
+        <section class="py-16 md:py-20 bg-surface border-t border-white/5" aria-label="Formulário de Contato">
+            <div class="max-w-4xl mx-auto px-4">
+                <div class="flex items-center gap-4 mb-8 justify-center">
+                    <span class="font-mono text-highlight text-xl">04.</span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white uppercase tracking-tight">Iniciar Projeto</h2>
+                </div>
+                
+                <form id="contactForm" class="space-y-6 max-w-lg mx-auto font-mono">
+                    <div>
+                        <label for="name" class="block text-xs uppercase text-gray-500 mb-2">Nome</label>
+                        <input type="text" id="name" name="name" class="w-full bg-black border border-white/10 p-4 text-white focus:outline-none focus:border-highlight transition-colors" placeholder="Seu nome" required aria-required="true">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-xs uppercase text-gray-500 mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="w-full bg-black border border-white/10 p-4 text-white focus:outline-none focus:border-highlight transition-colors" placeholder="seu@email.com" required aria-required="true">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-xs uppercase text-gray-500 mb-2">Mensagem</label>
+                        <textarea id="message" name="message" rows="4" class="w-full bg-black border border-white/10 p-4 text-white focus:outline-none focus:border-highlight transition-colors" placeholder="Como posso ajudar?" required aria-required="true"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-highlight text-black font-bold py-4 hover:bg-white transition-colors uppercase tracking-widest text-sm border-none cursor-pointer" title="Enviar formulário via e-mail">
+                        Enviar Mensagem Segura ->
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé Indie Melhorado -->
+    <footer id="contato" class="relative pt-24 pb-12 bg-black border-t border-white/10 overflow-hidden" role="contentinfo">
+        
+        <!-- Efeito de Fundo (Glow) -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-highlight/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <!-- Chamada Principal -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20 items-end">
+                <div>
+                    <span class="font-mono text-highlight text-sm tracking-widest mb-4 block animate-pulse">● STATUS: DISPONÍVEL</span>
+                    <h2 class="text-3xl sm:text-4xl md:text-7xl font-bold text-white font-mono tracking-tighter leading-none mb-6">
+                        VAMOS CRIAR<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-gray-500 to-white">O EXTRAORDINÁRIO.</span>
+                    </h2>
+                    <p class="text-gray-400 text-base md:text-lg max-w-md font-light">
+                        Seja para um projeto freelance, uma vaga júnior ou apenas networking. A porta está sempre aberta.
+                    </p>
+                </div>
+                <div class="lg:text-right">
+                    <!-- Email protegido (apenas visual, funcionalidade via form acima) -->
+                    <a href="mailto:ciquebrito.dev@gmail.com" class="group inline-flex items-center gap-4 text-lg sm:text-2xl md:text-4xl font-mono text-white hover:text-highlight transition-colors border-b border-white/20 pb-2 hover:border-highlight break-all" title="Enviar e-mail para Caique">
+                        <span>ciquebrito.dev@gmail.com</span>
+                        <i class="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform duration-300"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Grid de Navegação e Social -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 border-t border-white/10 pt-16">
+                
+                <!-- Coluna 1 -->
+                <div class="space-y-4">
+                    <h4 class="font-mono text-white font-bold uppercase tracking-wider mb-4 text-sm">Navegação</h4>
+                    <ul class="space-y-2 font-mono text-sm text-gray-500">
+                        <li><a href="#home" class="hover:text-white transition-colors hover:translate-x-2 inline-block duration-200" title="Ir para o topo">/ Início</a></li>
+                        <li><a href="#sobre" class="hover:text-white transition-colors hover:translate-x-2 inline-block duration-200" title="Sobre Caique">/ Sobre</a></li>
+                        <li><a href="#servicos" class="hover:text-white transition-colors hover:translate-x-2 inline-block duration-200" title="Meus Serviços">/ Serviços</a></li>
+                        <li><a href="#projetos" class="hover:text-white transition-colors hover:translate-x-2 inline-block duration-200" title="Meus Projetos">/ Projetos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 2 -->
+                <div class="space-y-4">
+                    <h4 class="font-mono text-white font-bold uppercase tracking-wider mb-4 text-sm">Social</h4>
+                    <ul class="space-y-2 font-mono text-sm text-gray-500">
+                        <!-- Links seguros -->
+                        <li><a href="https://www.linkedin.com/in/caique-brito-832480215/" target="_blank" rel="noopener noreferrer" class="hover:text-[#0077b5] transition-colors hover:translate-x-2 inline-block duration-200" title="Perfil profissional no LinkedIn">LinkedIn</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors hover:translate-x-2 inline-block duration-200" title="Repositórios no GitHub">GitHub</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer" class="hover:text-pink-500 transition-colors hover:translate-x-2 inline-block duration-200" title="Perfil no Instagram">Instagram</a></li>
+                    </ul>
+                </div>
+
+                 <!-- Coluna 3 -->
+                 <div class="space-y-4">
+                    <h4 class="font-mono text-white font-bold uppercase tracking-wider mb-4 text-sm">Contato Rápido</h4>
+                     <ul class="space-y-2 font-mono text-sm text-gray-500">
+                        <li>
+                            <a href="https://wa.me/5511984606694" target="_blank" rel="noopener noreferrer" class="hover:text-green-400 transition-colors flex items-center gap-2" title="Chamar no WhatsApp">
+                                <i class="fab fa-whatsapp"></i> +55 11 98460-6694
+                            </a>
+                        </li>
+                        <li>São Paulo, Brasil</li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 4 (Botão Voltar ao Topo) -->
+                <div class="flex flex-col justify-end items-start md:items-end">
+                     <a href="#home" class="group flex items-center gap-2 text-white font-mono text-xs uppercase tracking-widest border border-white/20 px-6 py-4 hover:bg-white hover:text-black transition-all" aria-label="Voltar ao topo da página" title="Subir para o início">
+                        Voltar ao Topo <i class="fas fa-arrow-up group-hover:-translate-y-1 transition-transform"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="flex flex-col md:flex-row justify-between items-center mt-20 pt-8 border-t border-white/5 text-xs text-gray-600 font-mono uppercase">
+                <p>&copy; 2024 Caique Brito. Todos os direitos reservados.</p>
+                <p>Designed with <i class="fas fa-heart text-red-900 animate-pulse" aria-hidden="true"></i> & Code</p>
+            </div>
         </div>
     </footer>
 
@@ -426,16 +684,82 @@
         const btnMobile = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
 
-        btnMobile.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // Fechar menu mobile ao clicar
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
+        if (btnMobile && menu) {
+            btnMobile.addEventListener('click', () => {
+                const isExpanded = btnMobile.getAttribute('aria-expanded') === 'true';
+                btnMobile.setAttribute('aria-expanded', !isExpanded);
+                menu.classList.toggle('hidden');
             });
-        });
+
+            // Fechar menu mobile ao clicar
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                    btnMobile.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+
+        // --- SISTEMA DE SEGURANÇA E VALIDAÇÃO ---
+        
+        // 1. Sanitização de Input (Anti-XSS)
+        // Remove caracteres perigosos que poderiam ser usados para injeção de código
+        function sanitizeInput(input) {
+            const tempDiv = document.createElement('div');
+            tempDiv.textContent = input;
+            return tempDiv.innerHTML;
+        }
+
+        // 2. Validação de Email (Regex Simples)
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        // Lógica do Formulário
+        const contactForm = document.getElementById('contactForm');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Pegar valores
+                const nameInput = document.getElementById('name');
+                const emailInput = document.getElementById('email');
+                const msgInput = document.getElementById('message');
+
+                // Validar Email
+                if (!validateEmail(emailInput.value)) {
+                    emailInput.classList.add('input-error');
+                    alert("Por favor, insira um e-mail válido.");
+                    setTimeout(() => emailInput.classList.remove('input-error'), 1000);
+                    return;
+                }
+
+                // Sanitizar Inputs (Proteção)
+                const safeName = sanitizeInput(nameInput.value);
+                const safeMsg = sanitizeInput(msgInput.value);
+
+                // Construir Link Mailto Seguro
+                const subject = `Contato via Portfólio de ${safeName}`;
+                const body = `Nome: ${safeName}%0D%0AEmail: ${emailInput.value}%0D%0A%0D%0AMensagem:%0D%0A${safeMsg}`;
+                
+                // Abrir cliente de email
+                window.location.href = `mailto:ciquebrito.dev@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`; 
+                
+                // Feedback visual
+                const btn = contactForm.querySelector('button');
+                const originalText = btn.innerText;
+                btn.innerText = "Redirecionando...";
+                btn.classList.add('bg-green-500');
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.remove('bg-green-500');
+                    contactForm.reset();
+                }, 3000);
+            });
+        }
     </script>
 </body>
 </html>
