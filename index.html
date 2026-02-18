@@ -441,35 +441,6 @@
             </div>
         </section>
 
-        <!-- Certificados -->
-        <section class="py-16 md:py-20 border-b border-white/5" aria-label="Certificados e Cursos">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h3 class="text-xl font-bold text-white font-mono mb-8 uppercase text-center">&lt;Certificações & Cursos /&gt;</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="border border-white/10 p-4 text-center hover:bg-white hover:text-black transition-all cursor-pointer group">
-                        <i class="fas fa-certificate text-2xl mb-2 text-gray-500 group-hover:text-black"></i>
-                        <p class="font-mono text-xs sm:text-sm font-bold">HTML5 & CSS3</p>
-                        <span class="text-[10px] sm:text-xs text-gray-500 group-hover:text-gray-800">Curso em Vídeo</span>
-                    </div>
-                    <div class="border border-white/10 p-4 text-center hover:bg-white hover:text-black transition-all cursor-pointer group">
-                        <i class="fas fa-certificate text-2xl mb-2 text-gray-500 group-hover:text-black"></i>
-                        <p class="font-mono text-xs sm:text-sm font-bold">JavaScript</p>
-                        <span class="text-[10px] sm:text-xs text-gray-500 group-hover:text-gray-800">Udemy</span>
-                    </div>
-                    <div class="border border-white/10 p-4 text-center hover:bg-white hover:text-black transition-all cursor-pointer group">
-                        <i class="fas fa-certificate text-2xl mb-2 text-gray-500 group-hover:text-black"></i>
-                        <p class="font-mono text-xs sm:text-sm font-bold">Git & GitHub</p>
-                        <span class="text-[10px] sm:text-xs text-gray-500 group-hover:text-gray-800">Alura</span>
-                    </div>
-                    <div class="border border-white/10 p-4 text-center hover:bg-white hover:text-black transition-all cursor-pointer group">
-                        <i class="fas fa-certificate text-2xl mb-2 text-gray-500 group-hover:text-black"></i>
-                        <p class="font-mono text-xs sm:text-sm font-bold">Lógica de Prog.</p>
-                        <span class="text-[10px] sm:text-xs text-gray-500 group-hover:text-gray-800">Digital Innovation One</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Projetos -->
         <section id="projetos" class="py-16 md:py-24 border-b border-white/5" aria-label="Projetos Selecionados">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -554,11 +525,11 @@
                         </div>
                         <div class="group-hover:translate-x-2 transition-transform duration-300">
                             <div class="flex items-center gap-3">
-                                <h4 class="text-white font-mono font-bold">v2.4 - Form Fix & Async</h4>
+                                <h4 class="text-white font-mono font-bold">v2.5 - Web3Forms Fix</h4>
                                 <span class="text-[10px] bg-highlight/20 text-highlight px-2 py-0.5 rounded uppercase font-bold">Atual</span>
                             </div>
                             <p class="text-gray-500 text-xs mt-1 font-mono">
-                                Atualização do sistema de envio de formulário para Web3Forms com async/await e correção de CSP.
+                                Correção definitiva do envio de formulário, prevenção de redirecionamento para Outlook e implementação robusta da API.
                             </p>
                         </div>
                     </div>
@@ -580,9 +551,9 @@
                             <div class="w-2 h-2 bg-gray-700 rounded-full group-hover:bg-gray-400"></div>
                         </div>
                         <div class="group-hover:translate-x-2 transition-transform duration-300">
-                            <h4 class="text-gray-400 font-mono font-bold group-hover:text-white">v2.2 - SEO & Performance</h4>
+                            <h4 class="text-gray-400 font-mono font-bold group-hover:text-white">v2.0 - Dark Indie</h4>
                             <p class="text-gray-600 text-xs mt-1 font-mono">
-                                Inclusão de preconnect, atributos title em links e schema.org.
+                                Redesign completo para estética dark/brutalista.
                             </p>
                         </div>
                     </div>
@@ -622,8 +593,10 @@
                 </div>
 
                 <form id="contactForm" class="space-y-6 max-w-lg mx-auto font-mono" action="https://api.web3forms.com/submit" method="POST">
-                    <!-- O campo de chave será inserido/atualizado pelo JavaScript para manter a proteção -->
+                    <!-- O campo de chave será inserido pelo JavaScript para manter a proteção -->
                     <input type="hidden" name="access_key" id="api-key-input">
+                    <!-- IMPORTANTE: redirect=false força retorno JSON, evitando redirects indesejados -->
+                    <input type="hidden" name="redirect" value="false">
                     <input type="hidden" name="subject" value="Novo Contato do Portfólio">
                     <input type="hidden" name="from_name" value="Portfólio Caique">
 
@@ -734,7 +707,7 @@
                         <span class="hidden md:block text-gray-800">|</span>
                         <div class="flex items-center gap-2 text-gray-500" title="Status do Site">
                             <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.6)]"></span>
-                            <span>System: Online v2.4</span>
+                            <span>System: Online v2.5</span>
                         </div>
                     </div>
 
@@ -754,7 +727,6 @@
     <script>
         // CONFIGURAÇÃO DE SEGURANÇA AVANÇADA
         // A chave foi ofuscada em Base64 e quebrada em partes para não aparecer no código fonte.
-        // Isso impede que robôs e leitores de código simples encontrem a chave.
         // Chave Real (Ofuscada): e1003a45-d4ba-4483-a61c-d26e18438a1e
         const _0xPartA = "ZTEwMDNhNDUtZDRiYS00NDgz";
         const _0xPartB = "LWE2MWMtZDI2ZTE4NDM4YTFl";
@@ -793,29 +765,37 @@
         });
 
         // --- SISTEMA DE FORMULÁRIO COM WEB3FORMS (ASYNC/AWAIT) ---
+        // Este script intercepta o envio do formulário para evitar o redirecionamento padrão
+        // e enviar os dados via AJAX (Fetch), proporcionando uma melhor experiência.
         const contactForm = document.getElementById('contactForm');
-        const submitBtn = document.getElementById('submit-btn');
-        const btnSpan = submitBtn ? submitBtn.querySelector('span') : null;
         
-        if (contactForm && submitBtn) {
-            
+        if (contactForm) {
+            // Injetar chave no input oculto ao carregar
+            // Isso garante que mesmo se o JS de envio falhar, o formulário HTML tenha a chave.
+            const keyInput = document.getElementById('api-key-input');
+            if(keyInput) keyInput.value = _0x4k3y;
+
             contactForm.addEventListener('submit', async (e) => {
+                // PREVINE O COMPORTAMENTO PADRÃO (Isso impede que o Outlook abra ou a página recarregue)
                 e.preventDefault();
                 
-                // Feedback elements
+                const submitBtn = document.getElementById('submit-btn');
+                const btnSpan = submitBtn ? submitBtn.querySelector('span') : null;
                 const feedbackSuccess = document.getElementById('form-feedback');
                 const feedbackError = document.getElementById('form-error');
                 
-                // Prepare form data
-                const formData = new FormData(contactForm);
-                // Injeta a chave segura diretamente no FormData
-                formData.append("access_key", _0x4k3y);
+                // Feedback visual de carregamento
+                const originalText = btnSpan ? btnSpan.textContent : "Enviar";
+                if(btnSpan) btnSpan.textContent = "Enviando...";
+                
+                if(submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
+                }
 
-                // UI Loading State
-                const originalText = btnSpan.textContent;
-                btnSpan.textContent = "Enviando...";
-                submitBtn.disabled = true;
-                submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
+                const formData = new FormData(contactForm);
+                // Garante que a chave correta está sendo enviada via Fetch
+                formData.append("access_key", _0x4k3y);
 
                 try {
                     const response = await fetch("https://api.web3forms.com/submit", {
@@ -826,34 +806,40 @@
                     const data = await response.json();
 
                     if (response.ok) {
-                        // Success Logic
-                        feedbackSuccess.classList.remove('hidden');
-                        feedbackError.classList.add('hidden');
+                        // Sucesso
+                        if(feedbackSuccess) feedbackSuccess.classList.remove('hidden');
+                        if(feedbackError) feedbackError.classList.add('hidden');
                         contactForm.reset();
                         
-                        // Hide success message after 5s
+                        // Esconder mensagem após 5 segundos
                         setTimeout(() => {
-                            feedbackSuccess.classList.add('hidden');
+                            if(feedbackSuccess) feedbackSuccess.classList.add('hidden');
                         }, 5000);
                     } else {
-                        // API Error Logic
-                        console.log(data); // Log for debugging
-                        feedbackError.textContent = "Erro: " + (data.message || "Falha no envio.");
-                        feedbackError.classList.remove('hidden');
-                        feedbackSuccess.classList.add('hidden');
+                        // Erro da API
+                        console.log(data);
+                        if(feedbackError) {
+                            feedbackError.textContent = "Erro: " + (data.message || "Falha no envio.");
+                            feedbackError.classList.remove('hidden');
+                        }
+                        if(feedbackSuccess) feedbackSuccess.classList.add('hidden');
                     }
 
                 } catch (error) {
-                    // Network Error Logic
+                    // Erro de Rede
                     console.error(error);
-                    feedbackError.textContent = "Erro de conexão. Tente novamente.";
-                    feedbackError.classList.remove('hidden');
-                    feedbackSuccess.classList.add('hidden');
+                    if(feedbackError) {
+                        feedbackError.textContent = "Erro de conexão. Tente novamente.";
+                        feedbackError.classList.remove('hidden');
+                    }
+                    if(feedbackSuccess) feedbackSuccess.classList.add('hidden');
                 } finally {
-                    // Reset Button State
-                    btnSpan.textContent = originalText;
-                    submitBtn.disabled = false;
-                    submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+                    // Restaurar botão
+                    if(btnSpan) btnSpan.textContent = originalText;
+                    if(submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+                    }
                 }
             });
         }
